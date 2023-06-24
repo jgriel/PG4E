@@ -1,0 +1,32 @@
+DATA TYPES
+    String fields (Char, Varchar)
+    Text fields (Text - generally not used with indexing and sorting)
+    binary fields [blobs] (BYTEA - not indexed/sorted or widely used)
+    numerical fields 
+        - integer numbers (SMALLINT(32768), INTEGER(2Billion), BIGINT(10^18ish))
+        - floating point (REAL (32bit), DOUBLE PRECISION(64bit), NUMERIC(specify))
+        - time (TIMESTAMP, DATE, TIME) [built in psql function NOW()]
+    auto_increment fields
+
+
+KEYS & INDEXES
+    *auto_increment*
+    DROP TABLE <name>;
+
+    CREATE TABLE <name> (
+        id SERIAL,
+        name VARCHAR(128),
+        email VARCHAR(128) UNIQUE,
+        ...,
+        PRIMARY KEY(id)
+    );
+
+    Trees & Hashes most common indexes
+    B-tree(binary/balanced) (logarithmic amortized time)
+    Data Ranges
+    Hashes - Great for exact matches, and GUID (not sorted)
+
+    \copy track_raw(title,artist,album,count,rating,len) FROM 'library.csv' WITH DELIMITER ',' CSV;
+
+
+RELATIONAL DB DESIGN
