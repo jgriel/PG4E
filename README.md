@@ -1,8 +1,8 @@
 # PG4E
 Follow along for Coursera's PostgreSQL For Everyone Courses by UMich
 ____________________________________________________________________
-**Certificate: Database Design and Basic SQL in PostgreSQL**
-|||
+
+| Certificate ||
 | ---- | ---------------------------------------------------------------------------------------- |
 | Name: | Database Design and Basic SQL in PostgreSQL
 | Issuing Organization: | Coursera
