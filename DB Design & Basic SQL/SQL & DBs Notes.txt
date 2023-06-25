@@ -67,3 +67,16 @@ USING JOIN
         Default/RESTRICT - Don't allow changes that break the constraint 
         CASCADE - Adjust child rows by removing or updating to maintian consistency
         SET NULL - Set the foreign key columns in the child rows to NULL
+
+
+MANY-TO-MANY-RELATIONSHIPS
+    ex: a member can include a studentID and a courseID, many students to many courses 
+
+    CREATE TABLE member (
+        student_id INTEGER REFERENCES student(id) ON DELETE CASCADE,
+        course_id  INTEGER REFERENCES course(id) ON DELETE CASCADE,
+        role       INTEGER,
+        PRIMARY KEY (student_id, course_id)
+    );
+
+    this example has no id, and its primary key is both a student_id and course_id, but this will not always be the case, ex: comments
