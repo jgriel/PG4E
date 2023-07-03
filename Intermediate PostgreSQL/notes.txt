@@ -1,2 +1,4 @@
 ALTERING TABLE SCHEMA
-    
+    ALTER TABLE <name> DROP COLUMN <col_name>;
+                       ALTER COLUMN <col_name> TYPE <type>;  
+                       ADD COLUMN <col_name> <type>;
