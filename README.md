@@ -1,5 +1,5 @@
 # PG4E
-Follow along for Coursera's PostgreSQL For Everyone Courses by UMich
+Follow along for Coursera's PostgreSQL For Everyone specialization by UMich
 ____________________________________________________________________
 
 | Certificate ||
