@@ -2,3 +2,32 @@ ALTERING TABLE SCHEMA
     ALTER TABLE <table_name> DROP COLUMN <col_name>;
                        ALTER COLUMN <col_name> TYPE <type>;  
                        ADD COLUMN <col_name> <type>;
+
+    Execute Commands from .sql File: \i <file-path>
+
+DATES
+    Types:
+        DATE
+        TIME
+        TIMESTAMP (time & date)
+        TIMESTAMPTZ (w/ time zone)
+        NOW() (PostgreSQL) --> DEFAULT NOW() when creating table
+
+    Able to cast: NOW()::DATE || CAST(NOW() AS DATE), 
+    Date interval arithmetic: NOW() - INTERVAL '2 days'
+
+DISTINCT / GROUP BY
+    DISTINCT - only shows unique rows once
+    DISTINCT ON - limits duplicate removal to a set of columns
+    GROUP BY = combined with aggregate functions COUNT(), MAX(), SUM(), AVG(), etc...
+
+SUBQUERIES
+    Query within a Query
+    Don't use it too much (slow)
+    SELECT <columns> FROM (<subquery) WHERE ...;
+
+CONCURRENCY & TRANSACTIONS 
+    Compound Statements - do more than one thing in one statement
+        INSERT INTO <column> (headers)
+            VALUES (<>)
+        RETURNING *;  
