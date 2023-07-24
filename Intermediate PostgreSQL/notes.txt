@@ -10,7 +10,7 @@ DATES
         DATE
         TIME
         TIMESTAMP (time & date)
-        TIMESTAMPTZ (w/ time zone)
+        TIMESTAMPTZ (with time zone)
         NOW() (PostgreSQL) --> DEFAULT NOW() when creating table
 
     Able to cast: NOW()::DATE || CAST(NOW() AS DATE), 
