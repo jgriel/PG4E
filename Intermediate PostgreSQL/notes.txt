@@ -27,7 +27,33 @@ SUBQUERIES
     SELECT <columns> FROM (<subquery) WHERE ...;
 
 CONCURRENCY & TRANSACTIONS 
+    
+        UPDATE column
+        SET attrib = attrib + 1
+        WHERE id = x
+    
+    BECOMES
+    
+        LOCK ROW x of column
+        READ attrib FROM column ROW x
+        attrib = attrib + 1
+        WRITE attrib TO column ROW x
+        UNLOCK ROW x OF column
+
     Compound Statements - do more than one thing in one statement
+    
         INSERT INTO <column> (headers)
-            VALUES (<>)
+            VALUES (...)
+            ON CONFLICT (headers)    // Similar to a try-catch
+            DO UPDATE SET attrib = column.attrib + x
         RETURNING *;  
+
+    lock strength UPDATE, NO KEY UPDATE
+    when encounting a lock, (WAIT), NOWAIT, SKIP LOCKED    
+
+STORED PROCEDURES
+    Reusable code that runs inside of the database server (instead of the client just querying and querying and querying)
+    Multiple languages choices, but just use "PL/pgSQL"
+    Generally not portable
+    Goal is to have fewer SQL statements
+    Need STRONG reason to use them
