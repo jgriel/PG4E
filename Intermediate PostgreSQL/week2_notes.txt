@@ -1,0 +1,2 @@
+COPY FROM CSV
+  \copy table(columns) FROM 'file_name' WITH DELIMITER ',' CSV;
