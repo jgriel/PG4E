@@ -1,2 +1,3 @@
-COPY FROM CSV
+COPY FROM CSV & NORMALIZE
   \copy table(columns) FROM 'file_name' WITH DELIMITER ',' CSV;
+  UPDATE table1 SET column = (SELECT column.attribute FROM table2 WHERE table2.attribute = table1.attribute);
