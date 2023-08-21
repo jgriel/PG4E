@@ -1,0 +1,31 @@
+GENERATING TEST DATA
+    repeat('substr', x) - generate string with substr repeated x times
+    generate_series(start, end) - generate lots of rows (similar to python range function[inclusive])
+    random() - defaults to fp bewtween 0 and 1
+
+TEXT FUNCTIONS
+    where clause operators:
+      - LIKE, ILIKE, NOT LIKE, NOT ILIKE
+      - SIMILAR TO, NOT SIMILAR TO  <--less standard
+      - =, >, <, >=, <=, BETWEEN, IN
+    manipulate select results - lower(), upper()
+
+    CASE 
+      WHEN <> 
+      THEN <> 
+      ELSE <> 
+    END
+
+    SELECT right(column, x) - get x amount of characters from right
+    SELECT left(column, x) - get x amount of character from left
+    SELECT strpos(column, 'str') - get idx of where str starts
+    SELECT substr(column, start, end)
+    SELECT split_part(column, 'substr', x) - similart to python split, get xth part of string after splitting it by substr
+    SELECT translate(column, 'from_chars', 'to_chars') - substitute chars in from_chars to chars in to_chars, 
+      EX: translate('hello', 'hle', 'kqj') --> kjqqo 
+    
+    BTrees are good for sorting, exact match lookup, prefix lookup    
+    explain analyze <QUERY> - get more in-depth data on a query's reasoning & performance
+
+CHARACTER SETS
+    
