@@ -28,4 +28,12 @@ TEXT FUNCTIONS
     explain analyze <QUERY> - get more in-depth data on a query's reasoning & performance
 
 CHARACTER SETS
-    
+    ascii(cahr) - gives ASCII number value
+    chr(ascii_value) - gives char from ascii/unicode value
+    Unicode allows for all characters from all languages to be included in one large character set
+    char_length('str')
+    octet_length('str')
+    bit_length('str')
+    SHOW SERVER_ENCODING;
+    UTF-8 >>
+
