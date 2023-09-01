@@ -35,5 +35,14 @@ CHARACTER SETS
     octet_length('str')
     bit_length('str')
     SHOW SERVER_ENCODING;
-    UTF-8 >>
+    UTF-8 >
 
+    BUT IN PYTHON
+        python2 --> python3, transition to unicode (UTF-8)
+
+HASHES
+    Python bitwise operators
+        << --> left shift
+        ^ --> XOR
+        & --> AND
+        
